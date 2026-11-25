@@ -1,10 +1,176 @@
+/* Общие настройки сайта */
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+    min-height: 100vh;
     font-family: sans-serif;
     background: #222;
     color: #fff;
     padding: 20px;
+    line-height: 1.6;
 }
-nav a {
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+    padding: 12px 0 20px;
+    border-bottom: 1px solid #444;
+}
+
+.site-nav a {
     color: #00ffcc;
     text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.site-nav button {
+    margin-left: auto;
+}
+
+.hero,
+.content-panel {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 28px;
+    background: #2d2d2d;
+    border: 1px solid #444;
+    border-radius: 16px;
+}
+
+.hero h1,
+.content-panel h1 {
+    margin-bottom: 16px;
+}
+
+.eyebrow {
+    color: #00ffcc;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}
+
+.section-title {
+    margin-bottom: 16px;
+}
+
+.muted-text {
+    color: #c4c4c4;
+}
+
+.btn-accent {
+    background: #00c9a7;
+    color: #14201e;
+    border: 1px solid #00c9a7;
+    font-weight: 600;
+}
+
+.btn-accent:hover {
+    background: #00e0bb;
+    border-color: #00e0bb;
+    color: #14201e;
+}
+
+.project-card {
+    height: 100%;
+    padding: 22px;
+    background: #303030;
+    color: #fff;
+    border: 1px solid #4b4b4b;
+    border-radius: 14px;
+}
+
+.project-card p {
+    color: #c4c4c4;
+}
+
+.project-card a {
+    color: #00ffcc;
+}
+
+.about-image {
+    display: block;
+    max-width: 100%;
+    width: 420px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
+.contact-form {
+    max-width: 620px;
+}
+
+.form-control {
+    background: #f8f9fa;
+}
+
+.modal-custom {
+    background: #303030;
+    color: #fff;
+}
+
+.site-footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    color: #aaa;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+/* Светлая тема, включается кнопкой */
+body.light-theme {
+    background: #f2f5f5;
+    color: #202525;
+}
+
+body.light-theme .hero,
+body.light-theme .content-panel,
+body.light-theme .project-card {
+    background: #fff;
+    color: #202525;
+    border-color: #d7e0df;
+}
+
+body.light-theme .project-card p,
+body.light-theme .muted-text,
+body.light-theme .site-footer {
+    color: #596563;
+}
+
+body.light-theme .site-nav {
+    border-color: #d7e0df;
+}
+
+body.light-theme .site-nav a {
+    color: #087f70;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .site-nav {
+        gap: 12px;
+    }
+
+    .site-nav button {
+        margin-left: 0;
+    }
+
+    .hero,
+    .content-panel {
+        padding: 20px;
+    }
 }
